@@ -1,0 +1,41 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+        <p class="title">Task Managment App</p>
+        <div class="user">
+            <img src="assets/unnamed.png" class="profile">
+            <h1>Harun Smaka</h1>
+        </div>
+        <div class="meni">
+            <div class="icon">
+                <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                    <label>Tasks</label>
+                </a>
+            </div>
+            <div class="icon">
+                <a [routerLink]="['/important']" routerLinkActive="router-link-active">
+                    <mat-icon>stars</mat-icon>
+                    <label>Important</label>
+                </a>
+            </div>
+            <div class="icon">
+                <a [routerLink]="['/assigned']" routerLinkActive="router-link-active">
+                    <mat-icon>person</mat-icon>
+                    <label>Assigned to you</label>
+                </a>
+            </div>
+            <div class="icon">
+                <a [routerLink]="['/archived']" routerLinkActive="router-link-active">
+                    <mat-icon>archive</mat-icon>
+                    <label>Archived</label>
+                </a>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="header">
+            <p>Tasks</p>
+        </div>
+        <router-outlet class="list"></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
